@@ -81,7 +81,7 @@ Persistent prescription timelines
 
 Docs
 See the detailed Pharmacy-Ready Prescription Standardizer specification: docs/pharmacy-ready-prescription-standardizer.md
-See the DB Specification Roadmap for prescription standardization: docs/pharmacy-ready-prescription-standardizer.md#database-specification-roadmap---prescription-standardization-system
+
 
 Medication reminders and adherence tracking
 
