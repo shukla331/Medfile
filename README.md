@@ -1,25 +1,11 @@
 # Medfile Monorepo
 
-This repository hosts the full Medfile journey with a backend API and a React frontend.
+This repository contains the project scaffolding only.
 
 ## Packages
 
-- `backend/` — Express API (stubbed OTP, uploads, review workflow).
-- `frontend/` — React UI for the patient and provider journeys.
-- `docs/` — Database schema and supporting documentation.
+- `backend/` — Node.js + Express service skeleton (README only).
+- `frontend/` — React application skeleton (README only).
+- `docs/` — Project documentation placeholders (README only).
 
-## Run locally
-
-```bash
-cd backend
-npm install
-npm run dev
-```
-
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-Open `http://localhost:3000` to follow the end-to-end journey.
+No business logic has been implemented.
