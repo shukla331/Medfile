@@ -103,13 +103,15 @@ export const processPrescription = async (
   stepSummaries.push(step('normalization', normalizationStart, normalizationEnd))
 
   const overallConfidence = calculateOverallConfidence(medicinesNormalized)
-  const requiresReview = medicinesNormalized.some(
-    (medicine) => medicine.confidence < confidenceThreshold
-  )
+  const hasMedicines = medicinesNormalized.length > 0
+  const requiresReview =
+    !hasMedicines ||
+    medicinesNormalized.some((medicine) => medicine.confidence < confidenceThreshold)
+  const status = hasMedicines ? 'success' : ocr.tokens.length === 0 ? 'failed' : 'partial'
 
   return {
     documentId: input.documentId,
-    status: 'success',
+    status,
     ocr,
     medicineLines,
     medicinesRaw,
